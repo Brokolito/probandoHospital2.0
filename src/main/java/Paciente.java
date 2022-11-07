@@ -20,7 +20,7 @@ public class Paciente {
 		return this.nombre;
 	}
 
-	public Paciente(int edad, String nombre, String apellido, int rut) {
+	public Paciente(String nombre, String apellido, int edad,int rut) {
 		this.edad=edad;
 		this.nombre=nombre;
 		this.apellido=apellido;

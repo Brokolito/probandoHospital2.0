@@ -8,8 +8,8 @@ public class Hospital {
 		this.pacientes=new ArrayList<Paciente>();
 	}
 
-	public Paciente addPaciente(int edad, String nombre, String apellido, int rut) {
-		Paciente paciente=new Paciente(edad,nombre,apellido,rut);
+	public Paciente addPaciente(String nombre, String apellido, int edad,int rut) {
+		Paciente paciente=new Paciente(nombre, apellido,edad, rut);
 		pacientes.add(paciente);
 		return paciente;
 	}
@@ -28,10 +28,18 @@ public class Hospital {
 		}
 	}
 
-	public void removePaciente(int edad, String nombre, String apellido, int rut) {
+	public void removePaciente(String nombre, String apellido, int edad,int rut) {
 		for(Paciente paciente:this.pacientes) {
 			if (paciente.getNombre().equals(nombre) && paciente.getApellido().equals(apellido) && paciente.getEdad() == edad && paciente.getRut() == rut) {
 				pacientes.remove(paciente);
 			}
-		}	}
+		}
+	}
+	public ArrayList<Paciente> getPacientes() {
+		return pacientes;
+	}
+
+	public ArrayList<Doctor> getDoctores() {
+		return doctores;
+	}
 }
